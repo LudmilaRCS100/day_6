@@ -41,6 +41,7 @@ namespace day_6
 
 
             //2.uzd
+            /*
 
             Console.WriteLine("Ievadiet pirmo skaitli: ");
 
@@ -83,7 +84,28 @@ namespace day_6
             Console.ReadLine();
 
         }
+        */
+            //i++=i+1
+            int vertiba = 20;
 
+            for (int i = 2; i < vertiba; i = i + 2)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
+
+            int skaititais = 0;
+            while (skaititais != 5)
+
+            {
+                Console.WriteLine(skaititais);
+                skaititais++;
+
+
+            }
+            Console.ReadLine();
+
+            /*
 
 
         static string PievienoSkaitli(string skaitlis)
@@ -100,7 +122,7 @@ namespace day_6
 
         static double SkaitluSalidzinasana(double skaitlis1, double skaitlis2)
 
-        {
+        
 
             double rezultats;
 
@@ -122,10 +144,41 @@ namespace day_6
 
             }
 
-            return rezultats;
+            return rezultats; */
+
+            string izvele = "";
+            double result = 0;
+            while (izvele != "izvele") ;
+
+
+            Console.WriteLine("Vai gribat saskaitit vai iziet?");
+            izvele = Console.ReadLine();
+            if (izvele == "saskaitit")
+            {
+                Console.WriteLine("Ievadiet pirmo skaitli");
+                string ievade1 = Console.ReadLine();
+                double skaitlis1 = Convert.ToDouble(ievade1);
+
+                Console.WriteLine("Ievadiet otro skaitli");
+                string ievade2 = Console.ReadLine();
+                double skaitlis2 = Convert.ToDouble(ievade1);
+
+                result = Calculate(skaitlis1, skaitlis2);
+
+                Console.WriteLine("Result=" + result);
+
+            }
+
+
+            Console.ReadLine();
+
 
         }
+        static double Calculate(double skaitlis1, double skaitlis2)
+        {
 
+            return skaitlis1 + skaitlis2;
+        }
     }
 
 }
